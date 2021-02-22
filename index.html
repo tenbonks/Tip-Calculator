@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body class="">
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- Heading -->
+        <div class="col-md-6 mx-auto mb-3">
+            <div class="card card-body text-center mt-5">
+                <h1 class="heading display-5 pb-3">Tip Calculator</h1>
+            </div>
+        </div>
+
+        <!-- Form Input -->
+        <div class="row">
+
+            <!-- Tip Calculator -->
+            <form id="tip-form">
+
+                <!-- Bill Total -->
+                <div class="row mb-2">
+                    <div class="form-group">
+                        <label for="billtotal">Bill Total</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">£</span>
+                            </div>
+                            <input type="number" step="0.1" class="form-control" placeholder="0.00" id="billtotal">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Head Count -->
+                <div class="row mb-2">
+                    <div class="form-group">
+                        <label for="billtotal">Split Between</label>
+                        <input type="number" class="form-control" value="1" min="1" step="1" id="headcount">
+                    </div>
+                </div>
+
+                <!-- Tip Percent -->
+                <div class="row mb-2">
+                    <div class="form-group tipPercent">
+                        <label for="">Tip Percent</label>
+                        <div class="input-group">
+                            <input type="range" class="form-range mt-3" id="tipInput" value="10" step="10">
+                            <span class="mt-2 mx-auto h4" id="tipOutput"></span>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+
+        </div>
+
+        <hr class="my-3">
+
+        <!-- Results -->
+        <div class="row">
+            <div id="results">
+                <h4 class="text-center mb-2">Results</h4>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Tip Amount</span>
+                    </div>
+                    <input type="number" class="form-control" id="tipAmount" readonly>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Bill with Tip</span>
+                    </div>
+                    <input type="number" class="form-control" id="totalBillWithTip" readonly>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js"
+        integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+    <script src="tipCalculator.js"></script>
+
+</body>
+
+</html>

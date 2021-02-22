@@ -1,0 +1,11 @@
+#results {
+    display: none;
+}
+
+input[readonly]{
+    background-color: transparent !important;
+}
+
+.input-group-text {
+    border-radius: .25rem 0 0 .25rem;
+}
